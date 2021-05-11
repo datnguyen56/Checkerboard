@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboard 1</title>
+    <style>
+        .color1 {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+        }
+        .color2 {
+            background-color: black;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        {% for i in range(down): %}
+            <tr>
+                {% for x in range(across): %}
+                <td class="color{{(i+x) %2+1}}"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
